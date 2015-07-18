@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="white" type="color">#ffffff</item>
+    <item name="material_grey_800" type="color">#424242</item>
+    <item name="material_green_500" type="color">#4caf50</item>
+    <item name="material_green_600" type="color">#43a047</item>
+    <item name="material_teal_500" type="color">#009688</item>
+    <item name="material_teal_600" type="color">#00897b</item>
+</resources>

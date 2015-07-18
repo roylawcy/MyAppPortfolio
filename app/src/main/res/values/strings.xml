@@ -1,0 +1,19 @@
+<resources>
+    <!-- app general string -->
+    <string name="app_name">My App Portfolio</string>
+    <string name="action_settings">Settings</string>
+    <!-- end of app general string -->
+
+    <!-- nano-degree app name -->
+    <string name="spotify_streamer">Spotify Streamer</string>
+    <string name="scores_app">Scores App</string>
+    <string name="library_app">Library App</string>
+    <string name="build_it_bigger">Build It Bigger</string>
+    <string name="xyz_reader">XYZ Reader</string>
+    <string name="capstone">Capstone: My Own App</string>
+    <!-- end of nano-degree app name -->
+
+    <!-- main activity -->
+    <string name="main_title">My Nanodegree Apps!</string>
+    <string name="launching_text">This button will launch |-APPNAME-|!</string>
+</resources>
