@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBuildItBiggerButton;
     private Button mXyzReaderButton;
     private Button mCapstoneButton;
+    private Toast mToast;
 
     private void initializeView() {
         mSpotifyStreamerButton = (Button) findViewById(R.id.button_spotify_streamer);
@@ -33,6 +34,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mCapstoneButton.setOnClickListener(this);
     }
 
+    private void showToast(String toastString) {
+        if (mToast != null) {
+            mToast.cancel();
+        }
+        mToast = Toast.makeText(this, toastString, Toast.LENGTH_SHORT);
+        mToast.show();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,59 +51,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
     public void onClick(View view) {
         String toastString = getText(R.string.launching_text).toString();
         switch (view.getId()) {
             case R.id.button_spotify_streamer:
                 toastString = toastString.replace("|-APPNAME-|", getText(R.string.spotify_streamer).toString());
-                Toast.makeText(this, toastString, Toast.LENGTH_SHORT).show();
+                showToast(toastString);
                 break;
 
             case R.id.button_scores_app:
                 toastString = toastString.replace("|-APPNAME-|", getText(R.string.scores_app).toString());
-                Toast.makeText(this, toastString, Toast.LENGTH_SHORT).show();
+                showToast(toastString);
                 break;
 
             case R.id.button_library_app:
                 toastString = toastString.replace("|-APPNAME-|", getText(R.string.library_app).toString());
-                Toast.makeText(this, toastString, Toast.LENGTH_SHORT).show();
+                showToast(toastString);
                 break;
 
             case R.id.button_build_it_bigger:
                 toastString = toastString.replace("|-APPNAME-|", getText(R.string.build_it_bigger).toString());
-                Toast.makeText(this, toastString, Toast.LENGTH_SHORT).show();
+                showToast(toastString);
                 break;
 
             case R.id.button_xyz_reader:
                 toastString = toastString.replace("|-APPNAME-|", getText(R.string.xyz_reader).toString());
-                Toast.makeText(this, toastString, Toast.LENGTH_SHORT).show();
+                showToast(toastString);
                 break;
 
             case R.id.button_capstone:
                 toastString = toastString.replace("|-APPNAME-|", getText(R.string.capstone).toString());
-                Toast.makeText(this, toastString, Toast.LENGTH_SHORT).show();
+                showToast(toastString);
                 break;
 
             default:

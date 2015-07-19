@@ -1,7 +1,6 @@
 <resources>
     <!-- app general string -->
     <string name="app_name">My App Portfolio</string>
-    <string name="action_settings">Settings</string>
     <!-- end of app general string -->
 
     <!-- nano-degree app name -->
